@@ -27,6 +27,10 @@ How to use
 -----------
 The work has not finished yet.
 
+Warning
+----------
+The seminar room reservation is only possible inside university's network. So does this software.
+
 Licence
 -------
 This software is distributed under GPL v3.0
