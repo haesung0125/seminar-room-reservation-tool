@@ -2,7 +2,7 @@ import datetime
 import requests
 
 '''
-Information needed to reservation seminar room
+Information needed to reserve a seminar room
 
 1. Name of the meeting
 2. Room number
