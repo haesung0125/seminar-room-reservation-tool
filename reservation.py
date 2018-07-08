@@ -24,14 +24,26 @@ def main():
     room_number="23-317"
     start_time="1000"
 
-    url="http://phya.snu.ac.kr/php/time_table/inputform_seminar_d.php?date="+date+"&bg_color="+bg_color[room_number]+"&room="+room_number+"&p_first="+start_time+"&next_date="+next_date
+    url="http://phya.snu.ac.kr/php/time_table/inputform_seminar_d.php?date="+date+"&bg_color="+bg_color[room_number]+"&room="+room_number+"&p_first="+start_time+"&next_date="+next_date+"/post"
 
     name="asdfadsfdsf" #name of the meeting
     prof_name="" #name of the professor
-
     duration="120" #in minutes.
-    Contact="010-1234-5678" #your contact information
-    Password="alpine" #password needed for cancellation
+
+    start_time2=int(start_time)
+    duration2=int(duration)
+    end2=start_time2+100*(duration/60)
+    if(duration==30):
+        end2+=30
+    else:
+        print("Reservation can be done only in 30-minute unit")
+        return 0
+    end=str(end2)
+    contact="010-1234-5678" #your contact information
+    password="alpine" #password needed for cancellation
+
+    payloads={'subject':name,'host':prof_name,'email':contact,'password':password,"p_end":end}
+    r=requests.post(url,data=payloads)
 
 if(__name__=="__main__"):
     main()
