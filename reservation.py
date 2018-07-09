@@ -3,8 +3,6 @@ import datetime
 import requests
 import optparse
 
-assert sys.version_info[0]>=3
-
 '''
 Information needed to reserve a seminar room
 
@@ -20,6 +18,10 @@ Information needed to reserve a seminar room
 
 def main():
 
+    if(sys.version_info[0]<3):
+        print("Please use python3 instead.")
+        return 0
+
     parser=optparse.OptionParser()
     parser.add_option("-d","--date",dest="date",help="Date to reserve. ex)2018-07-09")
     parser.add_option("-n","--name",dest="name",help="name of the seminar")
@@ -28,7 +30,8 @@ def main():
     parser.add_option('-e',"--end",dest="end_time",help="Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)")
     parser.add_option('-p',"--prof",dest="professor",help="Name of the Professor")
     parser.add_option('-c',"--contact",dest="contact",help="Contact Information")
-    parser.add_option('--pw',"--password",dest="password",default="alpine",help="Password needed for cancellation")
+    parser.add_option('-w',"--password",dest="password",default="alpine",help="Password needed for cancellation")
+    parser.add_option('-i',"--iteration",dest="iter",default=1, help="Number of weeks to reserve. default: 1")
 
     options,args=parser.parse_args()
 
