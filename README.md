@@ -25,7 +25,7 @@ Information needed to make a reservation
 
 How to use
 -----------
-The work has not finished yet.
+"'python3 reservation.py -d <date> -n <name> -r <room number> -s <starting time> -e <ending time> -p <prof name> -c <contact>'"
 
 Warning
 ----------
