@@ -46,9 +46,10 @@ def main():
     next_date=(date2-time_delta).strftime('%Y-%m-%d')
 
     bg_color={'56-219':'a2b461','56-321':'bf9475','56-521':'bf758a','23-317':'9975bf','129-205':'64b0c4','56-322':'8fd175','56-522':'67947a'}
-    url="http://phya.snu.ac.kr/php/time_table/inputform_seminar_d.php?date="+date+"&bg_color="+bg_color[room_number]+"&room="+room_number+"&p_first="+start_time+"&next_date="+next_date+"/post"
+    url="http://phya.snu.ac.kr/php/time_table/input_seminar_d.php?date="+date+"&bg_color="+bg_color[room_number]+"&room="+room_number+"&p_first="+start_time+"&next_date="+next_date+"/post"
     payloads={'subject':name,'host':prof_name,'email':contact,'password':password,"p_end":end_time}
     r=requests.post(url,data=payloads)
+    print(r.text)
 
 if(__name__=="__main__"):
     main()
