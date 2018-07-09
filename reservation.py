@@ -49,9 +49,6 @@ def main():
     if(int(end_time)<int(start_time)):
         print("you can't end something before you start.")
         return 0
-    if(int(end_time)%30!=0||int(start_time)%30!=0):
-        print("the time designation shall be done in 30-minute-units.")
-        return 0
 
     date2=datetime.datetime.strptime(date,"%Y-%m-%d")
     time_delta=datetime.timedelta(days=date2.weekday()+2)
