@@ -32,14 +32,26 @@ def main():
 
     options,args=parser.parse_args()
 
-    date=options['date']
-    name=options['name']
-    room_number=options['room_number']
-    start_time=options['start_time']
-    end_time=options['end_time']
-    prof_name=options['professor']
-    contact=options['contact']
-    password=options['password']
+    date=options.date
+    name=options.name
+    room_number=options.room_number
+    start_time=options.start_time
+    end_time=options.end_time
+    prof_name=options.professor
+    contact=options.contact
+    password=options.password
+
+    room_list=['56-219','56-321','56-521','23-317','129-205','56-322','56-522']
+    if(room_number not in room_list):
+        print("There is no room numbered "+room_number)
+        return 0
+
+    if(int(end_time)<int(start_time)):
+        print("you can't end something before you start.")
+        return 0
+    if(int(end_time)%30!=0||int(start_time)%30!=0):
+        print("the time designation shall be done in 30-minute-units.")
+        return 0
 
     date2=datetime.datetime.strptime(date,"%Y-%m-%d")
     time_delta=datetime.timedelta(days=date2.weekday()+2)
