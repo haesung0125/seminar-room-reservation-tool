@@ -19,9 +19,9 @@ Information needed to make a reservation
 3. Name of the professor
 4. Date
 5. starting time
-5. duration of the meeting
+5. ending time
 6. Contact Information
-7. Passwor
+7. Password
 
 How to use
 -----------
