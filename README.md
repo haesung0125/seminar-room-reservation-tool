@@ -25,7 +25,20 @@ Information needed to make a reservation
 
 How to use
 -----------
-python3 reservation.py -d <date> -n <name> -r <room number> -s <starting time> -e <ending time> -p <prof name> -c <contact>
+1. Go to the directory where reservation.py exists.
+2. execute script as below.
+  python3 reservation.py -d <date> -n <name> -r <room number> -s <starting time> -e <ending time> -p <prof name> -c <contact>
+
+Options
+---------
+  -d, --date     Date to reserve a room. ex)2018-07-09
+  -n --name      name of the meeting
+  -r --room      Seminar Room Number. ex)23-312,56-321
+  -s --start     Seminar starting time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
+  -e --end       Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
+  -p --prof      Name of the Professor
+  -c --contact   Contact Information
+  -w --password  Password needed for cancellation. Default is "Alpine" if you don't use this option.
 
 Warning
 ----------

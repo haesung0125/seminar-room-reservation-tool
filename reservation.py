@@ -24,7 +24,7 @@ def main():
 
     parser=optparse.OptionParser()
     parser.add_option("-d","--date",dest="date",help="Date to reserve. ex)2018-07-09")
-    parser.add_option("-n","--name",dest="name",help="name of the seminar")
+    parser.add_option("-n","--name",dest="name",help="name of the meeting")
     parser.add_option('-r',"--room",dest="room_number",help="Seminar Room Number. ex)23-312,56-321")
     parser.add_option('-s',"--start",dest="start_time",help="Seminar starting time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)")
     parser.add_option('-e',"--end",dest="end_time",help="Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)")
