@@ -15,7 +15,6 @@ def main():
     parser.add_option('-r',"--room",dest="room_number",help="Seminar Room Number. ex)23-312,56-321")
     parser.add_option('-w',"--password",dest="password",help="Password needed for cancellation")
 
-
     options,args=parser.parse_args()
 
     date=options.date
@@ -37,11 +36,12 @@ def main():
     index=int((int(start_time)-900)/50+1)
     if(int(start_time)%100==30):
         index+=1
-    row=tr[index]
+    row=BeautifulSoup(tr[index],'html.parser')
+    col=row.find_all('td')
 
     [date2.weekday()]
     payloads={'form':password}
-    post_action='http://phya.snu.ac.kr/php/time_table/action=delete_seminar.php?no=42857&bg_color=9975bf&date=2018-07-14&next_date='+next_date
+    post_action='http://phya.snu.ac.kr/php/time_table/action=delete_seminar.php?no=42857&bg_color='+bg_color['room_number']+'&date=2018-07-14&next_date='+next_date
     r=requests.post(post_action,data=payloads)
     print(r.text)
 
