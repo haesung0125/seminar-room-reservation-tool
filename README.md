@@ -25,24 +25,44 @@ Information needed to make a reservation
 
 How to use
 -----------
-1. Go to the directory where reservation.py exists.
-2. execute script as below.
-  python3 reservation.py -d <date> -n <name> -r <room number> -s <starting time> -e <ending time> -p <prof name> -c <contact>
+<code> python3 reservation.py -d "date" -n "name" -r "room number" -s "starting time" -e "ending time" -p "prof name" -c "contact" </code>
+
+* All option values shall be surrounded by double quotation marks, ex) -d "2018-07-17"
+* You can use -w option to make password for your reservation. Otherwise, it's Alpine for default.
+* You can use -i option to reserve seminar room for multiple weeks with same setting. default is 1.
 
 Options
----------
-  -d, --date     Date to reserve a room. ex)2018-07-09
-  -n --name      name of the meeting
-  -r --room      Seminar Room Number. ex)23-312,56-321
-  -s --start     Seminar starting time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
-  -e --end       Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
-  -p --prof      Name of the Professor
-  -c --contact   Contact Information
-  -w --password  Password needed for cancellation. Default is "Alpine" if you don't use this option.
+-----------
+### Compulsory options
+<pre>
+<code>
+  -d, --date      Date to reserve a room. ex)2018-07-09
+  -n --name       name of the meeting
+  -r --room       Seminar Room Number. ex)23-312,56-321
+  -s --start      Seminar starting time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
+  -e --end        Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
+  -p --prof       Name of the Professor
+  -c --contact    Contact Information
+
+</code>
+</pre>
+<pre>
+### Negligible options
+<code>
+  -w --password   Password needed to cancel reservation. Default is "Alpine" if you don't use this option.
+  -i --iteration  Number of weeks to reserve with same settings excecpt date. default: 1
+ 
+</code>
+</pre>
 
 Warning
 ----------
 The seminar room reservation is only possible inside university's network. So does this software.
+
+Requrements
+------------
+* Python3
+* Requests library
 
 Licence
 -------
