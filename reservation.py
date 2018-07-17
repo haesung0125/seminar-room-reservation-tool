@@ -51,11 +51,15 @@ def main():
     parser.add_option('-p',"--prof",dest="professor",help="Name of the Professor")
     parser.add_option('-c',"--contact",dest="contact",help="Contact Information")
     parser.add_option('-w',"--password",dest="password",default="alpine",help="Password needed for cancellation")
-    parser.add_option('-i',"--iteration",dest="iter",default=1, help="Number of weeks to reserve. default: 1")
+    parser.add_option('-i',"--iteration",dest="iter",default=1, help="Number of weeks to reserve with same settings except date. default: 1")
 
     options,args=parser.parse_args()
 
-    reserve(options.date,options.name,options.room_number,options.start_time,options.end_time,options.professor,options.contact,options.password)
+    for j in range(options.iter):
+        this_week=datetime.datetime.strptime(options.date,"%Y-%m-%d")
+        time_delta=datetime.timedelta(days=j*7)
+        next_week=(this_week+time_delta).strftime('%Y-%m-%d')
+        reserve(next_week,options.name,options.room_number,options.start_time,options.end_time,options.professor,options.contact,options.password)
 
 if(__name__=="__main__"):
     main()

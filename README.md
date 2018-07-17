@@ -25,11 +25,32 @@ Information needed to make a reservation
 
 How to use
 -----------
-python3 reservation.py -d <date> -n <name> -r <room number> -s <starting time> -e <ending time> -p <prof name> -c <contact>
+<code> python3 reservation.py -d "date" -n "name" -r "room number" -s "starting time" -e "ending time" -p "prof name" -c "contact" </code>
+
+* All option values shall be surrounded by double quotation marks, ex) -d "2018-07-17"
+* You can use -w option to make password for your reservation. Otherwise, it's Alpine for default.
+* You can use -i option to reserve seminar room for multiple weeks with same setting. default is 1.
+
+Options
+-----------
+<pre>
+
+
+
+
+
+
+</pre>
+
 
 Warning
 ----------
 The seminar room reservation is only possible inside university's network. So does this software.
+
+Requrements
+------------
+* Python3
+* Requests library
 
 Licence
 -------
