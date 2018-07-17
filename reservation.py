@@ -55,7 +55,7 @@ def main():
 
     options,args=parser.parse_args()
 
-    for j in range(int(options.iter):
+    for j in range(int(options.iter)):
         this_week=datetime.datetime.strptime(options.date,"%Y-%m-%d")
         time_delta=datetime.timedelta(days=j*7)
         next_week=(this_week+time_delta).strftime('%Y-%m-%d')
