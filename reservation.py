@@ -34,7 +34,7 @@ def reserve(date,name,room_number,start_time,end_time,professor,contact,password
     url="http://phya.snu.ac.kr/php/time_table/input_seminar_d.php?date="+date+"&bg_color="+bg_color[room_number]+"&room="+room_number+"&p_first="+start_time+"&next_date="+next_date+"/post"
     payloads={'subject':name,'host':professor,'email':contact,'password':password,"p_end":end_time}
     r=requests.post(url,data=payloads)
-    return r.txt
+    return 0
 
 def main():
 
