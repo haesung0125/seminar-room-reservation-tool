@@ -36,21 +36,21 @@ Options
 ### Compulsory options
 <pre>
 <code>
-  -d, --date      Date to reserve a room. ex)2018-07-09
-  -n --name       name of the meeting
-  -r --room       Seminar Room Number. ex)23-312,56-321
-  -s --start      Seminar starting time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
-  -e --end        Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
-  -p --prof       Name of the Professor
-  -c --contact    Contact Information
+-d, --date      Date to reserve a room. ex)2018-07-09
+-n --name       name of the meeting
+-r --room       Seminar Room Number. ex)23-312,56-321
+-s --start      Seminar starting time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
+-e --end        Seminar ending time in 4 digit number. ex)1000(10 a.m.), 1400(2 p.m.)
+-p --prof       Name of the Professor
+-c --contact    Contact Information
 
 </code>
 </pre>
-<pre>
 ### Negligible options
+<pre>
 <code>
-  -w --password   Password needed to cancel reservation. Default is "Alpine" if you don't use this option.
-  -i --iteration  Number of weeks to reserve with same settings excecpt date. default: 1
+-w --password   Password needed to cancel reservation. Default is "Alpine" if you don't use this option.
+-i --iteration  Number of weeks to reserve with same settings excecpt date. default: 1
  
 </code>
 </pre>
