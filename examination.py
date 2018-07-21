@@ -15,8 +15,8 @@ def get_a_day(date,room_number):
 
     url='http://phya.snu.ac.kr/php/time_table/'
 
-    if(today-date_wanted<=datetime.timedelta(days=today.weekday()) || date_wanted-today<=datetime.timedelta(days=5-today.weekday())):
-        url='http://phya.snu.ac.kr/php/time_table/list_seminar.php?room='+room_number+'&bg_color='+bg_color[room_number]
+    if(today-date_wanted<=datetime.timedelta(days=today.weekday()) | date_wanted-today<=datetime.timedelta(days=5-today.weekday())):
+        url+='http://phya.snu.ac.kr/php/time_table/list_seminar.php?room='+room_number+'&bg_color='+bg_color[room_number]
     elif(today-date_wanted>0):
         time_delta=datetime.timedelta(days=date_wanted.weekday()+2)
         next_date=(date_wanted-time_delta).strftime('%Y-%m-%d')
