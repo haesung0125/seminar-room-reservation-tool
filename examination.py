@@ -21,7 +21,7 @@ def get_a_day(date,room_number):
         time_delta=datetime.timedelta(days=date_wanted.weekday()+2)
         next_date=(date_wanted-time_delta).strftime('%Y-%m-%d')
         url+='list_seminar_before_.php?before_date='+next_date
-    else:
+    elif(today-date_wanted<0):
         time_delta=datetime.timedelta(days=date_wanted.weekday()+2)
         next_date=(date_wanted-time_delta).strftime('%Y-%m-%d')
         url+='list_seminar_next_.php?next_date='+next_date
