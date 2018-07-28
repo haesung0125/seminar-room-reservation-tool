@@ -26,10 +26,6 @@ def reserve(date,name,room_number,start_time,end_time,professor,contact,password
         print("you can't end something before you start.")
         return 0
 
-    if(int(start_time)%30!=0 | int(end_time)%30!=0):
-        print("The start/end time must be specified as ??00 or ??30")
-        return 0
-
     date2=datetime.datetime.strptime(date,"%Y-%m-%d")
     time_delta=datetime.timedelta(days=date2.weekday()+2)
     next_date=(date2-time_delta).strftime('%Y-%m-%d')
