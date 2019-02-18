@@ -49,7 +49,7 @@ Options
 ### Negligible options
 <pre>
 <code>
--w --password   Password needed to cancel reservation. Default is "Alpine" if you don't use this option.
+-w --password   Password needed to cancel reservation. Default is "alpine" if you don't use this option.
 -i --iteration  Number of weeks to reserve with same settings excecpt date. default: 1
  
 </code>
